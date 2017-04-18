@@ -14,7 +14,7 @@ def before_request_handler():
         ProGovWeb.create_table()
 
 
-class GovWebPipeline(object):
+class HainanGovPipeline(object):
 
     def process_item(self, item, spider):
         #import pdb
@@ -34,6 +34,5 @@ class GovWebPipeline(object):
                     )
         except Exception as e:
             logger.error(e)
-
 
         return item

@@ -16,9 +16,14 @@ logger = logging.getLogger('myspider')
 
 
 class HainanGoverSpider(scrapy.Spider):
-    name = "hainan_gover"
+    name = "hainan_gov"
     allowed_domains = ["hainan.gov.cn"]
     start_urls = ['http://hainan.gov.cn/']
+    custom_settings = {
+            'ITEM_PIPELINES': {
+                    'government.pipelines.HainanGovPipeline': 300,
+                    }
+            }
 
     def __init__(self):
         self.headers = HEADERS

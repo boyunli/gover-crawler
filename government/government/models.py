@@ -15,14 +15,16 @@ class BaseModel(Model):
 class ProGovWeb(BaseModel):
     provincial_depart = CharField()
     provincial_url = CharField()
-    #city_country_name = CharField()
-    #city_country_url = CharField()
     #class Meta:
     #    #create a unique together
     #    indexes =(
     #            (('searching_keyword', 'drop_down_keywords'), True),
     #            )
 
+class CityCountryGovWeb(BaseModel):
+    city_country_name = CharField()
+    city_country_depart = CharField()
+    city_country_url = CharField()
 
 #class KeyInfo(BaseModel):
 #    site = ForeignKeyField(Site, related_name='key_info')
