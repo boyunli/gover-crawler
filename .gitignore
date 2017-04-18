@@ -89,3 +89,5 @@ ENV/
 .ropeproject
 *.py~
 .*.sw[op]
+government/government/*.py~
+government/government/spiders/*.py~
