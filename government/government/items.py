@@ -8,8 +8,14 @@
 import scrapy
 
 
-class GovernmentItem(scrapy.Item):
+class ProvItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     provincial_depart = scrapy.Field()
     provincial_url = scrapy.Field()
+
+
+class CityCountryItem(scrapy.Item):
+    city_country_name = scrapy.Field()
+    city_country_depart = scrapy.Field()
+    city_country_url = scrapy.Field()

@@ -8,7 +8,7 @@ import scrapy
 from scrapy.http import Request
 
 from government.settings import HEADERS, LOGGING
-from government.items import GovernmentItem
+from government.items import ProvItem
 
 logging.config.dictConfig(LOGGING)
 logger = logging.getLogger('myspider')
@@ -38,7 +38,7 @@ class HainanGoverSpider(scrapy.Spider):
         #import pdb
         #pdb.set_trace()
         for url, depart  in re.findall(r'(\w+\.\w+\.\w+\.\w+\w+\.?).+&\w+\W\s(\W+)<', text):
-            item = GovernmentItem()
+            item = ProvItem()
             item['provincial_url'] = url
             item['provincial_depart'] = depart
             items.append(item)
